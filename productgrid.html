@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Product Grid</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+  
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+  
+    .card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .desc {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media only screen and (max-width: 455px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Responsive Product Grid</h2>
+
+<div class="product-grid">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/70" alt="Product 1">
+        <div class="title">Product 1</div>
+        <div class="desc">High-quality item with great features.</div>
+        <div class="price">₹499</div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/70" alt="Product 2">
+        <div class="title">Product 2</div>
+        <div class="desc">Durable and stylish for daily use.</div>
+        <div class="price">₹799</div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/70" alt="Product 3">
+        <div class="title">Product 3</div>
+        <div class="desc">Lightweight and comfortable.</div>
+        <div class="price">₹1,299</div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/70" alt="Product 4">
+        <div class="title">Product 4</div>
+        <div class="desc">Trendy design with premium quality.</div>
+        <div class="price">₹999</div>
+    </div>
+
+</div>
+
+</body>
+</html>
